@@ -28,7 +28,7 @@ class Encoder(nn.Module):
         self.conv1x1_1 = nn.Conv2d(in_channels, out_channels, kernel_size=1, padding='same')
         self.conv1x1_2 = nn.Conv2d(out_channels, out_channels, kernel_size=3, padding='same')
 
-        self.relu = nn.ReLU(replace=True)
+        self.relu = nn.ReLU()
 
         self.down = nn.MaxPool2d(kernel_size=2, stride=2)
 
